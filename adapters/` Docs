@@ -1,0 +1,32 @@
+# Relational Algebra → MindsEye SQL Mapping
+
+This document explains how classic **relational algebra** operators map into **MindsEye SQL**.
+
+## Core Operators
+
+- **Selection (σ)**  
+  `σ_condition(R)` → `SELECT * FROM R WHERE <condition>`
+
+- **Projection (π)**  
+  `π_columns(R)` → `SELECT <columns> FROM R`
+
+- **Rename (ρ)**  
+  `ρ_newName(R)` → `FROM R AS newName`
+
+- **Join (⋈)**  
+  `R ⋈_condition S` → `FROM R JOIN S ON <condition>`
+
+## MindsEye Layer
+
+MindsEye SQL adds:
+
+- `@time(...)` blocks
+- `@pattern(...)` hooks
+- `@route(...)` hints
+
+Example mapping:
+
+Relational algebra:
+
+```text
+π_name,age ( σ_age>18 ( Users ) )
