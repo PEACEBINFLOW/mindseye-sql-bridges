@@ -1,0 +1,12 @@
+# Legacy DB Language X → MindsEye SQL
+
+This file describes a **toy legacy scripting language** inspired by early dBase/COBOL-style systems.
+
+## Example Script
+
+```text
+OPEN customers
+FILTER country = "BW" AND balance > 0
+SELECT id, name, balance
+TIME WINDOW LAST_30_DAYS
+ROUTE CLOUD_SQL lane=billing
