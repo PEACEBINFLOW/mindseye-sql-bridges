@@ -1,0 +1,54 @@
+# HISTORY_TIMELINE – Time-Labeled Language Evolution
+
+This doc sketches how **past data languages** flow into **MindsEye SQL** through this repo.
+
+## 1960s–1970s: Relational Algebra & Early DBs
+
+- Relational algebra (Codd)
+- Early structured query prototypes
+- Core ideas:
+  - Tables as relations
+  - Selection / projection / join
+  - Declarative querying
+
+→ Captured in `relational_adapter.ts`.
+
+---
+
+## 1980s–1990s: dBase, COBOL, Early SQL
+
+- Imperative scripts that **drive** data access
+- Cursor loops, file-style record processing
+- Vendor-specific SQL dialects
+
+→ Captured in `legacy_script_adapter.ts` as:
+- `OPEN`, `FILTER`, `SELECT`, `TIME WINDOW`, `ROUTE`
+
+---
+
+## 2000s–2010s: ORM Era & NoSQL
+
+- ORMs hide SQL, but keep relational ideas alive
+- NoSQL introduces:
+  - Event streams
+  - Document stores
+  - Polyglot persistence
+
+→ MindsEye SQL keeps **relational power**, but adds:
+- Time blocks
+- Pattern & binary awareness
+- Network routing hints
+
+---
+
+## 2020s+: MindsEye / LAW-T Era
+
+- Time is a **first-class** concept (LAW-T)
+- Every query can be:
+  - Time-labeled
+  - Provenanced
+  - Routed intelligently
+
+This repo acts as a **bridge**:
+
+> “Past languages keep speaking, but they now speak into a time-native SQL core.”
